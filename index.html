@@ -86,13 +86,6 @@
                     <legend>Absent Form</legend>
                     
                     <label for="name">Name:</label><br>
-                    <datalist id="name">
-                        <option value="Jonathan">
-                        <option value="Wilson">
-                        <option value="Melissa">
-                        <option value="Joseph">
-                        <option value="Emily">
-                    </datalist>
                     <select id="name" name="name" required>
                         <option value="" disabled selected>Select your name</option>
                         <option value="Jonathan">Jonathan</option>
@@ -100,9 +93,15 @@
                         <option value="Melissa">Melissa</option>
                         <option value="Joseph">Joseph</option>
                         <option value="Emily">Emily</option>
-                    </select><br><br>
+                    </select><br><br>"
 
                     <label for="reason">Reason for Absence:</label><br>
+                    <datalist id="reasons">
+                        <option value="Sick">
+                        <option value="Family Emergency">
+                        <option value="Personal Reasons">
+                        <option value="Other">
+                    </datalist>
                     <textarea id="reason" name="reason" rows="4" cols="50" required></textarea><br><br>
 
                     <button type="submit">Submit</button>
