@@ -10,88 +10,40 @@
 <body>
 
     <header id="index-header">
-        <nav>
-            <a href="#attendance">Attendance</a></li>
-            <a href="#agenda">Agenda</a>
-            <a href="#unfinished">Unfinished</a>
-            <a href="#new">New</a>
-            <a href="#cq">Comments/Questions</a>
-            <a href="#media">Media</a>
-            <a href="#form">Absent Form</a>
-        </nav>
-    </header>
-
-    <div>
         <h1>Group 17 - Null Terminators</h1>
-        <h2>Meeting Overview</h2>
-        <p><strong>Date:</strong> Wednesday - April 15, 2025</p>
-        <p><strong>Topic:</strong> Warm-Up Activity</p>
+        <nav id="nav-bar">
+            <a href="#overview" class="nav-bar">Overview</a>
+            <a href="#attendance" class="nav-bar">Attendance</a>
+            <a href="#unfinished-new" class="nav-bar">Unfinished/New</a>
+            <a href="#cq" class="nav-bar">Comments/Questions</a>
+            <a href="#media" class="nav-bar">Media</a>
+        </nav>
     </header>
 
     <main>
 
-        <section id="attendance">
-            <h3>Attendance</h3>
-            <ul>
-                <li>Jonathan Kook</li>
-                <li>Wilson</li>
-                <li>Melissa</li>
-                <li>Joseph</li>
-                <li>Emily</li>
-            </ul>
-        </section>
-
-        <section id="agenda">
-            <h3>Agenda</h3>
-            <ol>
+        <section id="overview">
+            <h2>Meeting Overview</h2>
+            <p><strong>Date:</strong> Wednesday - April 15, 2025</p>
+            <p><strong>Topic:</strong> Warm-Up Activity</p>
+            <div id="agenda"><strong>Agenda:</strong><ol id="agenda-list">
                 <li>Discuss warm-up activity</li>
                 <li>Assign roles / positions</li>
                 <li>Complete warm-up activity</li>
-            </ol>
+            </ol></div>
         </section>
 
-        <section id="unfinished">
-            <h3>Unfinished</h3>
-            <ul>
-                <li>Warm-Up Activity</li>
-                <li>Roles / Positions</li>
-            </ul>
-        </section>
+        <section id="attendance">
+            <h2>Attendance</h2>
+            <div id="attendance-list">
+                <h3>Members Present:</h3>
+                <p>Jonathan, Wilson, Emily</p>
 
-        <section id="new">
-            <h3>New</h3>
-            <ul>
-                <li>Project Timeline</li>
-                <li>Assignments</li>
-            </ul>
-        </section>
-
-        <section id="cq">
-            <h3>Comments</h3>
-            <p>The roles should be changed.</p>
-            <h3>Questions</h3>
-            <p><strong>What time is the next meeting?</strong> Friday at 3pm</p>
-        </section>
-
-        <section id="media">
-            <h3>Media</h3>
-            <div>
-                <p>New Team Logo:</p>
-                <span><img src="screenshots/grp17-logo.png" alt="Group 17 Logo" width="200"></span>
-
-                <p>W3-Validator</p>
-                <img src="screenshots/w3-validator.png" alt="W3 Validator" width="200">
             </div>
-        </section>
 
-        <section id="form">
-            <h3>Absent Form</h3>
-            <p>If you were absent, please fill out the form below:</p>
             <form>
                 <fieldset>
-                    <legend>Absent Form</legend>
-                    
-                    <label for="name">Name:</label><br>
+                    <legend><strong>Absent Form:</strong></legend>                    
                     <select id="name" name="name" required>
                         <option value="" disabled selected>Select your name</option>
                         <option value="Jonathan">Jonathan</option>
@@ -99,22 +51,66 @@
                         <option value="Melissa">Melissa</option>
                         <option value="Joseph">Joseph</option>
                         <option value="Emily">Emily</option>
-                    </select><br><br>
-
-                    Reason for Absence:<br>
-                    <input list="reasons" id="reason" name="reason" required>
+                    </select>
+                    <input list="reasons" id="reason" name="reason" placeholder="Reason for Absence" required>
                     <datalist id="reasons">
                         <option value="Sick">
                         <option value="Family Emergency">
                         <option value="Personal Reasons">
                         <option value="Other">
                     </datalist>
-                    <p><textarea id="reason-text" name="reason-text" rows="4" cols="50" required></textarea><br></p>
+                    <textarea id="reason-text" name="reason-text" rows="3" placeholder="Anything else you would like to add"></textarea><br>
 
                     <button type="submit">Submit</button>
                 </fieldset>
-            </form>
 
+        </section>
+
+        <section id="unfinished-new">
+            <div id="unfinished-new-container">
+                <div class="unfinished-new-item">
+                    <h3>Unfinished</h3>
+                    <ul class="un-class">
+                        <li>Warm-Up Activity</li>
+                        <li>Roles / Positions</li>
+                    </ul>
+                </div>
+                <div class="unfinished-new-item">
+                    <h3>New</h3>
+                    <ul class="un-class">
+                        <li>Project Timeline</li>
+                        <li>Assignments</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="cq">
+            <div id="unfinished-new-container">
+                <div class="unfinished-new-item">
+                    <h3>Comments</h3>
+                    <p>The roles should be changed.</p>
+                </div>
+                <div class="unfinished-new-item">
+                    <h3>Questions</h3>
+                    <p><strong>What time is the next meeting?</strong> Friday at 3pm</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="media">
+            <h2>Media</h2>
+
+            <div id="media-container">
+                <div class="media-item">
+                    <h3>Null Terminators Logo</h3>
+                    <img src="/images/null-terminators.png" alt="Null-Terminators-Logo" width="50%">
+                </div>
+                <div class="media-item">
+                    <h3>W3-Validator</h3>
+                    <img src="/images/null-terminators.png" alt="W3-Validator" width="50%">
+                </div>
+            </div>
         </section>
 
     </main>
